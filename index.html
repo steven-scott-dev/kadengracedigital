@@ -7,14 +7,13 @@
 <title>Kaden Grace Digital | Knoxville Web Design</title>
 <meta name="description" content="High-impact web design and automation for gig workers, freelancers, and small businesses in Knoxville. Websites that close deals while you sleep." />
 
-<!-- Modern clean font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary: #0F172A;
   --secondary: #1E293B;
-  --accent: #F97316; /* UT orange, used subtly */
+  --accent: #F97316;
   --accent-soft: #fbbf24;
   --glow: rgba(249,115,22,0.45);
   --light: #F4F6F8;
@@ -37,7 +36,7 @@ a { text-decoration: none; }
 .hero {
   background: url('images/hero-vol.jpg') center center / cover no-repeat;
   color: #fff;
-  padding: 7rem 1.5rem 8rem;
+  padding: 12rem 1.5rem 8rem;
   position: relative;
   text-align: center;
   display: flex;
@@ -146,6 +145,54 @@ h1 {
   color: var(--primary);
 }
 
+/* SERVICES */
+section {
+  padding: 5rem 1.5rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+  color: var(--primary);
+}
+
+.subtext {
+  max-width: 650px;
+  color: #4b5563;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 2.6rem 2.3rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  transition: transform .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* NEW SAME-DAY FIX CARD */
+.fastfix {
+  border-left: 6px solid var(--accent);
+}
+
+.fastfix ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.fastfix ul li {
+  margin-bottom: 0.4rem;
+}
+
 /* PORTFOLIO */
 .portfolio {
   padding: 5rem 1.5rem;
@@ -153,8 +200,6 @@ h1 {
 }
 
 .portfolio h2 {
-  font-size: 2.3rem;
-  color: var(--primary);
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -265,6 +310,44 @@ button[type="submit"]:hover {
   box-shadow: 0 14px 40px var(--glow);
 }
 
+/* NEW CTA SECTION */
+.quick-cta {
+  background: var(--light);
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.quick-cta h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.quick-cta p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #4b5563;
+}
+
+.quick-cta a {
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer span { color: var(--accent); }
+
 /* FLOATING CALL BUTTON */
 .call-float {
   position: fixed;
@@ -279,16 +362,6 @@ button[type="submit"]:hover {
   z-index: 99;
 }
 
-footer {
-  background: #020617;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 2rem 1.5rem;
-  font-size: 0.9rem;
-}
-
-footer span { color: var(--accent); }
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .cta-row {
@@ -296,25 +369,43 @@ footer span { color: var(--accent); }
     align-items: center;
   }
 }
+
+.top-logo {
+  position: fixed;      /* stays in the corner while scrolling */
+  top: 15px;            /* distance from top */
+  left: 15px;           /* distance from left */
+  z-index: 100;         /* above everything else */
+}
+
+.top-logo img {
+  height: 250px;         /* small size, adjust if needed */
+  width: auto;
+  display: block;
+}
+
 </style>
 </head>
 
 <body>
+
+  <a href="#" class="top-logo">
+  <img src="images/logo2.png" alt="Kaden Grace Digital Logo">
+</a>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="badge">Knoxville • Fountain City</div>
 
-    <h1>Kaden Grace Digital</h1>
+    <h1>Websites & Google Listings That Get Knoxville Businesses More Calls</h1>
 
-    <h2>Web Design for Gig Workers, Freelancers & Small Businesses</h2>
+    <h2>Same‑day fixes, clean modern sites, and Google Business tune‑ups for local service pros.</h2>
 
-    <p>Your website should be closing deals while you sleep.</p>
+    <p>Proudly serving Knoxville, Fountain City & East Tennessee — Go Vols 🧡</p>
 
     <div class="cta-row">
-      <a href="#contact" class="btn-primary">Email Me</a>
-      <a href="tel:+18653094122" class="btn-secondary">Call (865) 309-4122</a>
+      <a href="#contact" class="btn-primary">Request a Quick Review</a>
+      <a href="#contact" class="btn-secondary">Free Site Check</a>
     </div>
   </div>
 </section>
@@ -337,12 +428,54 @@ footer span { color: var(--accent); }
   </div>
 </section>
 
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <h2>What I Build</h2>
+    <p class="subtext">If your site looks fine but doesn’t bring business, it’s broken.</p>
+
+    <div class="grid">
+
+      <!-- NEW SAME-DAY FIX CARD -->
+      <div class="card fastfix">
+        <h3>Same‑Day Website & Google Fixes</h3>
+        <p>Fast, targeted improvements that get you more calls — today.</p>
+
+        <ul>
+          <li>Mobile layout fixes</li>
+          <li>Speed improvements</li>
+          <li>Call button optimization</li>
+          <li>Google Business tune‑ups</li>
+        </ul>
+
+        <p><strong>Starting at $150 • 24‑hour turnaround</strong></p>
+      </div>
+
+      <!-- EXISTING CARDS -->
+      <div class="card">
+        <h3>Websites That Convert</h3>
+        <p>Fast, modern, mobile-first sites that earn trust instantly.</p>
+      </div>
+
+      <div class="card">
+        <h3>Automation & Follow-Ups</h3>
+        <p>Forms and systems that capture leads automatically.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Tools</h3>
+        <p>Dashboards and tools built around how you work.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PORTFOLIO -->
 <section class="portfolio">
   <h2>Portfolio</h2>
   <p class="subtext">A few examples of the kind of clean, high‑trust work I build.</p>
 
-<a href="https://barberssite.netlify.app/" target="_blank">
   <div class="portfolio-grid">
     <div class="project">
       <img src="images/site.png" alt="">
@@ -351,9 +484,7 @@ footer span { color: var(--accent); }
         <p>Modern, mobile-first redesign that increased calls by 40%.</p>
       </div>
     </div>
-  </a>
 
-  <a href="https://portfolio2a.netlify.app/" target="_blank">
     <div class="project">
       <img src="images/bot.png" alt="">
       <div class="project-info">
@@ -361,9 +492,7 @@ footer span { color: var(--accent); }
         <p>Clean, trust-building layout with automated lead capture.</p>
       </div>
     </div>
-    </a>
 
-    <a href="https://ai-battle-land.netlify.app/" target="_blank">
     <div class="project">
       <img src="images/site2.png" alt="">
       <div class="project-info">
@@ -372,6 +501,15 @@ footer span { color: var(--accent); }
       </div>
     </div>
   </div>
+</section>
+
+<!-- NEW CTA SECTION -->
+<section class="quick-cta">
+  <h2>Not sure what you need?</h2>
+  <p>No pressure — I’ll take a quick look at your site or Google listing and tell you exactly what’s worth fixing.</p>
+
+  <a href="mailto:kadengracedigital@gmail.com?subject=Quick Website Review">
+    Request a Quick Website Review
   </a>
 </section>
 
@@ -396,7 +534,7 @@ footer span { color: var(--accent); }
   </div>
 </section>
 
-  <a href="#contact" class="call-float">Email Me</a>
+<a href="tel:+18653094122" class="call-float">📞 Call</a>
 
 <footer>
   © <span>Kaden Grace Digital</span> • Knoxville, TN
