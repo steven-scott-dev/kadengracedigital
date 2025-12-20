@@ -3,28 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Kaden Grace Digital | Knoxville Web Design</title>
 <meta name="description" content="High-impact web design and automation for gig workers, freelancers, and small businesses in Knoxville. Websites that close deals while you sleep." />
-
-<!-- Modern clean font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary: #0F172A;
   --secondary: #1E293B;
-  --accent: #F97316; /* UT orange, used subtly */
+  --accent: #F97316;
   --accent-soft: #fbbf24;
   --glow: rgba(249,115,22,0.45);
   --light: #F4F6F8;
   --dark: #111827;
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin:0; padding:0; }
 
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--dark);
   background: #fff;
@@ -32,6 +28,24 @@ body {
 }
 
 a { text-decoration: none; }
+
+/* HEADER LOGO */
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+header img {
+  height: 40px;
+  vertical-align: middle;
+}
+header span {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 8px;
+}
 
 /* HERO */
 .hero {
@@ -222,18 +236,13 @@ h1 {
   margin: 0 auto 2.5rem;
 }
 
-/* FORM */
 form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: 600;
-}
+label { display: block; margin-bottom: 0.4rem; font-weight: 600; }
 
 input, textarea {
   width: 100%;
@@ -244,10 +253,7 @@ input, textarea {
   font-size: 1rem;
 }
 
-textarea {
-  height: 140px;
-  resize: vertical;
-}
+textarea { height: 140px; resize: vertical; }
 
 button[type="submit"] {
   background: var(--accent);
@@ -289,29 +295,26 @@ footer {
 
 footer span { color: var(--accent); }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-  .cta-row {
-    flex-direction: column;
-    align-items: center;
-  }
+  .cta-row { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
-
 <body>
+
+<!-- HEADER LOGO -->
+<header>
+  <img src="images/logo.png" alt="Kaden Grace Digital Logo">
+  <span>Kaden Grace Digital</span>
+</header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="badge">Knoxville • Fountain City</div>
-
     <h1>Kaden Grace Digital</h1>
-
     <h2>Web Design for Gig Workers, Freelancers & Small Businesses</h2>
-
     <p>Your website should be closing deals while you sleep.</p>
-
     <div class="cta-row">
       <a href="#contact" class="btn-primary">Email Me</a>
       <a href="tel:+18653094122" class="btn-secondary">Call (865) 309-4122</a>
@@ -342,37 +345,37 @@ footer span { color: var(--accent); }
   <h2>Portfolio</h2>
   <p class="subtext">A few examples of the kind of clean, high‑trust work I build.</p>
 
-<a href="https://barberssite.netlify.app/" target="_blank">
   <div class="portfolio-grid">
-    <div class="project">
-      <img src="images/site.png" alt="">
-      <div class="project-info">
-        <h3>Local Service Business</h3>
-        <p>Modern, mobile-first redesign that increased calls by 40%.</p>
+    <a href="https://barberssite.netlify.app/" target="_blank">
+      <div class="project">
+        <img src="images/site.png" alt="">
+        <div class="project-info">
+          <h3>Local Service Business</h3>
+          <p>Modern, mobile-first redesign that increased calls by 40%.</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="https://portfolio2a.netlify.app/" target="_blank">
-    <div class="project">
-      <img src="images/bot.png" alt="">
-      <div class="project-info">
-        <h3>Freelancer Portfolio</h3>
-        <p>Clean, trust-building layout with automated lead capture.</p>
+    <a href="https://portfolio2a.netlify.app/" target="_blank">
+      <div class="project">
+        <img src="images/bot.png" alt="">
+        <div class="project-info">
+          <h3>Freelancer Portfolio</h3>
+          <p>Clean, trust-building layout with automated lead capture.</p>
+        </div>
       </div>
-    </div>
     </a>
 
     <a href="https://ai-battle-land.netlify.app/" target="_blank">
-    <div class="project">
-      <img src="images/site2.png" alt="">
-      <div class="project-info">
-        <h3>Small Business Website</h3>
-        <p>Custom tools and forms built around how they work.</p>
+      <div class="project">
+        <img src="images/site2.png" alt="">
+        <div class="project-info">
+          <h3>Small Business Website</h3>
+          <p>Custom tools and forms built around how they work.</p>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
-  </a>
 </section>
 
 <!-- CONTACT -->
